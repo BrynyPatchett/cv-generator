@@ -5,7 +5,7 @@ function TextBox({text}){
 
     return(
         <>
-        <p>I should Up date{text}</p>
+        <p>{text}</p>
         </>
     )
 
