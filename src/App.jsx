@@ -16,7 +16,7 @@ function App() {
   });
 
   //array of education credentials objects [{School of Study,Title of Study, date}]
-  const [educationCredentials, setEducationCredentials] = useState([]);
+  const [educationCredentials, setEducationCredentials] = useState([{id:12,school:"Hamilton",date:"2012",title:"degree"},{id:11232}]);
 
   //going to be two sides
 
@@ -33,22 +33,36 @@ function App() {
     setPersonalInfo({ ...personinfo, [field]: e.target.value });
   }
 
+  // function updateEducationInfo(creds) {
+  //   setEducationCredentials([...educationCredentials,creds]);
+  // }
+
   return (
     <>
       <div className="inputLeft">
         {/*Personal Info ssection, inputs edit personinfo */}
         <PersonalInfo updatePersonalInfo={updatePersonalInfo} />
         {/*Eduacational experience section */}
-        <EducationPanel educationCredentials={educationCredentials} updateEducationCredentials={setEducationCredentials}/>
+        <EducationPanel educationCredentials={educationCredentials} setEducationCredentials={setEducationCredentials}/>
         {/*Career experience section */}
         {/* <PersonalInfo updatePersonalInfo={updatePersonalInfo}/> */}
       </div>
 
       <div className="outputRight">
         <TextBox text={personinfo.firstName + " " + personinfo.lastName} />
+
+        {/* Basic rendering of personal info */}
         {Object.keys(personinfo).map((field) => (
           <p key={field}>{field + " : " + personinfo[field]}</p>
-        ))}
+        ))
+        }
+        {/* Basic education info of personal info */}
+        {educationCredentials.map((cred) => (
+           Object.keys(cred).map((field) => (
+            <p key={field}>{field + " : " + cred[field]}</p>
+          ))
+        ))
+        }
       </div>
     </>
   );
