@@ -16,7 +16,10 @@ function App() {
   });
 
   //array of education credentials objects [{School of Study,Title of Study, date}]
-  const [educationCredentials, setEducationCredentials] = useState([{id:12,school:"Hamilton",date:"2012",title:"degree"},{id:11232}]);
+  const [educationCredentials, setEducationCredentials] = useState([
+    { id: 12, school: "Hamilton", date: "2012", title: "degree" },
+    { id: 11232 },
+  ]);
 
   //going to be two sides
 
@@ -43,7 +46,10 @@ function App() {
         {/*Personal Info ssection, inputs edit personinfo */}
         <PersonalInfo updatePersonalInfo={updatePersonalInfo} />
         {/*Eduacational experience section */}
-        <EducationPanel educationCredentials={educationCredentials} setEducationCredentials={setEducationCredentials}/>
+        <EducationPanel
+          educationCredentials={educationCredentials}
+          setEducationCredentials={setEducationCredentials}
+        />
         {/*Career experience section */}
         {/* <PersonalInfo updatePersonalInfo={updatePersonalInfo}/> */}
       </div>
@@ -54,15 +60,15 @@ function App() {
         {/* Basic rendering of personal info */}
         {Object.keys(personinfo).map((field) => (
           <p key={field}>{field + " : " + personinfo[field]}</p>
-        ))
-        }
+        ))}
         {/* Basic education info of personal info */}
         {educationCredentials.map((cred) => (
-           Object.keys(cred).map((field) => (
-            <p key={field}>{field + " : " + cred[field]}</p>
-          ))
-        ))
-        }
+          <div key={cred.id} className="education-section">
+            {Object.keys(cred).map((field) => (
+              <p key={field}>{field + " : " + cred[field]}</p>
+            ))}
+          </div>
+        ))}
       </div>
     </>
   );
