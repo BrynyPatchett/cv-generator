@@ -1,8 +1,12 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react';
+
 import EducationSection from './educationSection'
 
-function EducationPanel({educationCredentials,setEducationCredentials}) {
-  const [elementCount,setElementCount] = useState(0);
+function EducationPanel({educationCredentials,setEducationCredentials,largestId}) {
+
+
+  const [elementCount,setElementCount] = useState(largestId + 1);
 
   function AddNewEducationCred(){
     setEducationCredentials([...educationCredentials,{id:elementCount}]);
@@ -10,7 +14,7 @@ function EducationPanel({educationCredentials,setEducationCredentials}) {
   }
   
   return (
-  <div>
+  <div className="education-section">
 
   {/*Needs Add, clicling add will add an extra educational segment to the output*/}
 
@@ -24,8 +28,8 @@ function EducationPanel({educationCredentials,setEducationCredentials}) {
 
 
 
-  <button type="" onClick={()=>AddNewEducationCred()} >ADD</button>
-  <button type="submit">Submit</button>
+  <button type="" onClick={()=>AddNewEducationCred()} >ADD EDUCATION</button>
+
   </div>);
 }
 
