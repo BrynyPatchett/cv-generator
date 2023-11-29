@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
+import {addNewCredential} from "../untils/stateUtils";
 import CareerSection from "./careerSection"
 
 
@@ -8,10 +9,7 @@ function CareerPanel({careerExperiences, setcareerExperiences, largestId})
 {
 
     const [elementCount,setElementCount] = useState(largestId + 1);
-    function addNewCareerExperience(){
-        setcareerExperiences([...careerExperiences,{id:elementCount}]);
-        setElementCount(elementCount + 1);
-    }
+
 
     return (
         <>
@@ -23,7 +21,7 @@ function CareerPanel({careerExperiences, setcareerExperiences, largestId})
         )))}
 
         {/* <CareerSection /> */}
-        <button type="" onClick={addNewCareerExperience}>ADD Experience</button>
+        <button type="" onClick={()=>addNewCredential(elementCount,setElementCount,careerExperiences, setcareerExperiences)}>ADD Experience</button>
 
         </>
     )

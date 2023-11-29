@@ -4,6 +4,7 @@ import TextBox from "./components/textbox";
 import PersonalInfo from "./components/personalInfo";
 import EducationPanel from "./components/educationPanel";
 import CareerPanel from "./components/careerPanel"
+import ReferencesPanel from "./components/referencesPanel";
 
 
 
@@ -19,7 +20,7 @@ function App() {
 
   //personinfo object contain information about a person
   const [personinfo, setPersonalInfo] = useState({
-    firstName: "",
+    firstName: "tests",
     lastName: "",
     phoneNumber: "",
     email: "",
@@ -36,6 +37,8 @@ function App() {
     // { id: 123123, companyName: "Briscoes", position:"manager", responsiblity:"Managing", dateStart: "2012", dateEnd:"2022" },
     // { id: 121223, companyName: "asd", position:"asd", responsiblity:"asd", dateStart: "2012", dateEnd:"2022" }
   ]);
+
+  const [references, setReferences] = useState([{id:123,name:"Bob Smith",relationship:"mananger", phoneNumber:"0123123123",email:"fake@live.com"}])
 
   //going to be two sides
 
@@ -58,6 +61,10 @@ function App() {
   return latestId(careerExperiences);
   },[])
 
+  const largestReferenceId = useMemo(() => {
+    return latestId(references);
+    },[])
+  
 
 
 
@@ -72,7 +79,7 @@ function App() {
       <div className="inputLeft">
         {/*Personal Info ssection, inputs edit personinfo */}
         <h1>Personal Information</h1>
-        <PersonalInfo updatePersonalInfo={updatePersonalInfo} />
+        <PersonalInfo personalInfo={personinfo}updatePersonalInfo={updatePersonalInfo} />
         {/*Eduacational experience section */}
         <EducationPanel
           educationCredentials={educationCredentials}
@@ -82,6 +89,7 @@ function App() {
         />
         {/*Career experience section */}
         <CareerPanel careerExperiences={careerExperiences} setcareerExperiences={setcareerExperiences}  largestId={largestExperienceId}/>
+        <ReferencesPanel references={references} setReferences={setReferences} largestId={largestReferenceId}/>
       </div>
 
       <div className="outputRight">
@@ -106,7 +114,15 @@ function App() {
               <p key={field}>{field + " : " + cred[field]}</p>
             ))}
           </div>
-        ))}
+        ))}    {/* Basic rendering of career info*/}
+        {references.map((cred) => (
+        <div key={cred.id} className="education-section">
+          {Object.keys(cred).map((field) => (
+            <p key={field}>{field + " : " + cred[field]}</p>
+          ))}
+        </div>
+      ))}
+        
       </div>
     </>
   );

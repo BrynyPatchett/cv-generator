@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
+import {addNewCredential} from "../untils/stateUtils";
 
 import EducationSection from './educationSection'
 
@@ -8,11 +9,7 @@ function EducationPanel({educationCredentials,setEducationCredentials,largestId}
 
   const [elementCount,setElementCount] = useState(largestId + 1);
 
-  function AddNewEducationCred(){
-    setEducationCredentials([...educationCredentials,{id:elementCount}]);
-    setElementCount(elementCount+ 1);
-  }
-  
+ 
   return (
   <div className="education-section">
 
@@ -28,7 +25,7 @@ function EducationPanel({educationCredentials,setEducationCredentials,largestId}
 
 
 
-  <button type="" onClick={()=>AddNewEducationCred()} >ADD EDUCATION</button>
+  <button type="" onClick={()=>addNewCredential(elementCount,setElementCount,educationCredentials,setEducationCredentials)} >ADD EDUCATION</button>
 
   </div>);
 }

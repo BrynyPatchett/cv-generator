@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-function PersonalInfo({updatePersonalInfo}) {
+function PersonalInfo({personalInfo,updatePersonalInfo}) {
 
   return (
     <>
@@ -7,6 +7,7 @@ function PersonalInfo({updatePersonalInfo}) {
         <input
           onChange={(e) => updatePersonalInfo(e, "firstName")}
           placeholder="First Name"
+          defaultValue={personalInfo.firstName !== "" ? personalInfo.firstName : ""}
         />
         <input
           onChange={(e) => updatePersonalInfo(e, "lastName")}
