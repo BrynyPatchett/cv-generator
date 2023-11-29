@@ -14,15 +14,10 @@ function CareerPanel({careerExperiences, setcareerExperiences, largestId})
     return (
         <>
         <h1>Experience</h1>
-        <p>Happy Career Panel</p>
-
         {careerExperiences.map((exp =>(
-            <CareerSection key={exp.id} exp={exp} careerExperiences={careerExperiences} setcareerExperiences={setcareerExperiences}/>
+            <CareerSection key={exp.id} cred={exp} careerExperiences={careerExperiences} setcareerExperiences={setcareerExperiences}/>
         )))}
-
-        {/* <CareerSection /> */}
         <button type="" onClick={()=>addNewCredential(elementCount,setElementCount,careerExperiences, setcareerExperiences)}>ADD Experience</button>
-
         </>
     )
 }

@@ -1,30 +1,14 @@
-
-
-function ReferencesSection({refx,references,setReferences}){
-
-    function removeCredntial(){
-        setReferences(references.filter(elem => elem.id !== refx.id));
-    }
-
-    function updateCredntial(value,field){
-        setReferences(references.map((elem)=>{
-            if(elem.id === refx.id){
-                return {...elem,[field]:value}
-            }
-            else{
-                return elem;
-            }
-        }))
-
-    }
+import { removeCredential,updateCredential } from "../untils/stateUtils";
+/* eslint-disable react/prop-types */
+function ReferencesSection({cred,references,setReferences}){
 
 
     return <>
-        <input type="text" onChange={(e)=>updateCredntial(e.target.value,"name")} placeholder="name" />
-        <input type="text" onChange={(e)=>updateCredntial(e.target.value,"relationship")} placeholder="relationship" />
-        <input type="text" onChange={(e)=>updateCredntial(e.target.value,"phonenumber")} placeholder="phonenumber" />
-        <input type="text" onChange={(e)=>updateCredntial(e.target.value,"email")} placeholder="email" />
-        <button onClick={removeCredntial}>Delete</button>
+        <input type="text" onChange={(e)=>updateCredential(cred,references,setReferences,e.target.value,"name")} placeholder="name" />
+        <input type="text" onChange={(e)=>updateCredential(cred,references,setReferences,e.target.value,"relationship")} placeholder="relationship" />
+        <input type="text" onChange={(e)=>updateCredential(cred,references,setReferences,e.target.value,"phoneNumber")} placeholder="phonenumber" />
+        <input type="text" onChange={(e)=>updateCredential(cred,references,setReferences,e.target.value,"email")} placeholder="email" />
+        <button onClick={()=>removeCredential(cred,references,setReferences)}>Delete</button>
     </>
 }
 
