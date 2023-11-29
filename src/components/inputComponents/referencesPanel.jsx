@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ReferencesSection from "./referencesSection";
-import {addNewCredential} from "../untils/stateUtils";
+import {addNewCredential} from "../../untils/stateUtils";
 /* eslint-disable react/prop-types */
 
 function ReferencesPanel({references,setReferences,largestId}){

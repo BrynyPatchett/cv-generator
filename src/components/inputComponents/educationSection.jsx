@@ -1,4 +1,4 @@
-import { removeCredential,updateCredential } from "../untils/stateUtils";
+import { removeCredential,updateCredential } from "../../untils/stateUtils";
 
 
 /* eslint-disable react/prop-types */

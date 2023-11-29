@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import { removeCredential,updateCredential } from "../untils/stateUtils";
+import { removeCredential,updateCredential } from "../../untils/stateUtils";
 
 function CareerSection({cred,careerExperiences, setcareerExperiences}){
 

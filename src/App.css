@@ -39,3 +39,9 @@
 .education-section{
   border: 2px solid navy;
 }
+
+
+.cvDisplay{
+  background-color: rgb(255, 255, 255);
+  margin: 20px;
+}

@@ -1,9 +1,10 @@
 import { useMemo, useState } from "react";
 import "./App.css";
-import PersonalInfo from "./components/personalInfo";
-import EducationPanel from "./components/educationPanel";
-import CareerPanel from "./components/careerPanel";
-import ReferencesPanel from "./components/referencesPanel";
+import PersonalInfo from "./components/inputComponents/personalInfo";
+import EducationPanel from "./components/inputComponents/educationPanel";
+import CareerPanel from "./components/inputComponents/careerPanel";
+import ReferencesPanel from "./components/inputComponents/referencesPanel";
+import CVDisplay from "./components/cvDisplay";
 
 function App() {
   //reduced an array to the largest id
@@ -69,17 +70,18 @@ function App() {
           personalInfo={personinfo}
           updatePersonalInfo={updatePersonalInfo}
         />
-        {/*Eduacational experience section */}
-        <EducationPanel
-          educationCredentials={educationCredentials}
-          setEducationCredentials={setEducationCredentials}
-          largestId={largestEducationId}
-        />
+      
         {/*Career experience section */}
         <CareerPanel
           careerExperiences={careerExperiences}
           setcareerExperiences={setcareerExperiences}
           largestId={largestExperienceId}
+        />
+          {/*Eduacational experience section */}
+         <EducationPanel
+          educationCredentials={educationCredentials}
+          setEducationCredentials={setEducationCredentials}
+          largestId={largestEducationId}
         />
         <ReferencesPanel
           references={references}
@@ -89,34 +91,41 @@ function App() {
       </div>
 
       <div className="outputRight">
-        {/* Basic rendering of personal info */}
+{/*         
         {Object.keys(personinfo).map((field) => (
           <p key={field}>{field + " : " + personinfo[field]}</p>
-        ))}
-        {/* Basic rendering of education info*/}
+        ))} */}
+        {/* Basic rendering of education info
         {educationCredentials.map((cred) => (
           <div key={cred.id} className="education-section">
             {Object.keys(cred).map((field) => (
               <p key={field}>{field + " : " + cred[field]}</p>
             ))}
           </div>
-        ))}
+        ))} */}
         {/* Basic rendering of career info*/}
-        {careerExperiences.map((cred) => (
+        {/* {careerExperiences.map((cred) => (
           <div key={cred.id} className="education-section">
             {Object.keys(cred).map((field) => (
               <p key={field}>{field + " : " + cred[field]}</p>
             ))}
           </div>
-        ))}{" "}
+        ))} */}
         {/* Basic rendering of career info*/}
-        {references.map((cred) => (
+        {/* {references.map((cred) => (
           <div key={cred.id} className="education-section">
             {Object.keys(cred).map((field) => (
               <p key={field}>{field + " : " + cred[field]}</p>
             ))}
           </div>
-        ))}
+        ))} */}
+        <CVDisplay personalInfo={personinfo} careerExperiences={careerExperiences} educationCredentials={educationCredentials} references={references} />
+
+
+
+
+
+
       </div>
     </>
   );

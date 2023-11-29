@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import {addNewCredential} from "../untils/stateUtils";
+import {addNewCredential} from "../../untils/stateUtils";
 import CareerSection from "./careerSection"
 
 
