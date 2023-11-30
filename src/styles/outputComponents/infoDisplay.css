@@ -1,0 +1,36 @@
+.displayInfo{
+    
+}
+
+h3{
+    font-size: 1rem;
+    margin: 0;
+}
+.sectionTitle{
+    margin-bottom: 0px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+}
+
+.info-section{
+    display: flex;
+    gap: 20px;
+}
+
+.title{
+    margin: 0;
+}
+
+.date{
+    align-self: self-start;
+    width: 35ch;
+    max-width: 35ch;
+}
+
+.paragraph{
+    margin: 0;
+    max-width: 75ch;
+}

@@ -4,7 +4,7 @@ import PersonalInfo from "./components/inputComponents/personalInfo";
 import EducationPanel from "./components/inputComponents/educationPanel";
 import CareerPanel from "./components/inputComponents/careerPanel";
 import ReferencesPanel from "./components/inputComponents/referencesPanel";
-import CVDisplay from "./components/cvDisplay";
+import CVDisplay from "./components/outputComponents/cvDisplay";
 
 function App() {
   //reduced an array to the largest id
@@ -34,11 +34,11 @@ function App() {
 
   const [references, setReferences] = useState([
     // {
-    //   // id: 123,
-    //   // name: "Bob Smith",
-    //   // relationship: "mananger",
-    //   // phoneNumber: "0123123123",
-    //   // email: "fake@live.com",
+    //   id: 123,
+    //   name: "Bob Smith",
+    //   relationship: "mananger",
+    //   phoneNumber: "0123123123",
+    //   email: "fake@live.com",
     // },
   ]);
 
@@ -91,41 +91,8 @@ function App() {
       </div>
 
       <div className="outputRight">
-{/*         
-        {Object.keys(personinfo).map((field) => (
-          <p key={field}>{field + " : " + personinfo[field]}</p>
-        ))} */}
-        {/* Basic rendering of education info
-        {educationCredentials.map((cred) => (
-          <div key={cred.id} className="education-section">
-            {Object.keys(cred).map((field) => (
-              <p key={field}>{field + " : " + cred[field]}</p>
-            ))}
-          </div>
-        ))} */}
-        {/* Basic rendering of career info*/}
-        {/* {careerExperiences.map((cred) => (
-          <div key={cred.id} className="education-section">
-            {Object.keys(cred).map((field) => (
-              <p key={field}>{field + " : " + cred[field]}</p>
-            ))}
-          </div>
-        ))} */}
-        {/* Basic rendering of career info*/}
-        {/* {references.map((cred) => (
-          <div key={cred.id} className="education-section">
-            {Object.keys(cred).map((field) => (
-              <p key={field}>{field + " : " + cred[field]}</p>
-            ))}
-          </div>
-        ))} */}
+        
         <CVDisplay personalInfo={personinfo} careerExperiences={careerExperiences} educationCredentials={educationCredentials} references={references} />
-
-
-
-
-
-
       </div>
     </>
   );

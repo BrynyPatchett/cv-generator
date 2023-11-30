@@ -1,0 +1,35 @@
+.personalDisplay {
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgb(163, 163, 163);
+}
+
+.fullName{
+    margin: 0;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contactField{
+    display: flex;
+    flex-direction: row;
+    > p{
+        margin: 0;
+    }
+    
+}
+.fieldTitle{
+  width: 8ch;
+  max-width: 8ch;
+}
+
+.fieldTitle{
+    max-width: 30ch;
+  }

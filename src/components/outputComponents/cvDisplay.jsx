@@ -1,4 +1,7 @@
-import { render } from "react-dom"
+/* eslint-disable react/prop-types */
+import InfoDisplay from "./infoDisplay"
+import PersonInfoDisplay from "./personalInfoDisplay"
+
 
 function CVDisplay({personalInfo,careerExperiences,educationCredentials,references}){
 
@@ -20,10 +23,12 @@ function CVDisplay({personalInfo,careerExperiences,educationCredentials,referenc
 
     return(
         <div className="cvDisplay">
-           { renderFields(personalInfo)}
-           { renderArray(careerExperiences)}
-           { renderArray(educationCredentials)}
-           { renderArray(references)}
+           {/* { renderFields(personalInfo)} */}
+           <PersonInfoDisplay personalInfo={personalInfo}/>
+           {/* { renderArray(careerExperiences)} */}
+           <InfoDisplay displayInfo={careerExperiences} title={"Work Experience"}/>
+           {/* { renderArray(educationCredentials)}
+           { renderArray(references)} */}
         </div>
     )
 
