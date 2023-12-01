@@ -72,6 +72,10 @@ button:focus-visible {
   display: flex;
   height: 100%;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column
+  }
 }
 
 .personalInfo{
@@ -86,5 +90,6 @@ button:focus-visible {
 
 .outputRight{
   flex: 1.5;
-background-color: lightblue;
+  background-color: white;
+  margin: 0px 50px;
 }

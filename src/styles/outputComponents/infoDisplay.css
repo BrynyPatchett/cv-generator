@@ -1,5 +1,7 @@
+
 .displayInfo{
-    
+      border-bottom: 2px solid rgb(163, 163, 163);
+      padding-bottom: 20px;
 }
 
 h3{
@@ -7,7 +9,7 @@ h3{
     margin: 0;
 }
 .sectionTitle{
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
 
 .info{
@@ -21,16 +23,50 @@ h3{
 }
 
 .title{
-    margin: 0;
+    display: inline;
+    margin-left: 5px;
 }
 
 .date{
     align-self: self-start;
-    width: 35ch;
-    max-width: 35ch;
+    width: 30ch;
+    max-width: 30ch;
+    overflow-wrap: break-word;
+    @media (max-width: 768px) {
+    
+        max-width: 55px;
+      }
+    
 }
+.info-wrapper{
+    border-left: 3px solid navy;
+    padding: 5px;
+    height: auto;
+    margin-bottom: 2px;
+}
+
 
 .paragraph{
     margin: 0;
-    max-width: 75ch;
+    width: 70ch;
+    max-width: 70ch;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    font-size: 1rem;
+    @media (max-width: 768px) {
+        
+        /* font-size: 0.8rem; */
+        width: 30ch;
+        max-width: 20ch;
+      }
+      /* border-left: 3px solid navy; */
 }
+
+
+li{
+   
+    list-style-type:'\2022';
+    margin-left: -1px;
+    margin-right: 10px;
+}
+

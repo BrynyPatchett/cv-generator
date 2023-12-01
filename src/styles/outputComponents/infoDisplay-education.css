@@ -1,0 +1,39 @@
+
+
+.education-experience .info-section{
+    
+    gap: 0px;
+}
+
+
+.education-experience .title{
+    
+    margin: 0;
+}
+
+
+.education-experience .date{
+    align-self: self-start;
+    width: 20ch;
+    max-width: 20ch;
+    overflow-wrap: break-word;
+    padding-right: 5px;
+    @media (max-width: 768px) {
+        width: 15ch;
+        max-width: 15ch;
+        overflow-wrap: break-word;
+      }
+    
+}
+.education-experience .info-wrapper{
+    border-left: none;
+    padding: 0;
+    height: auto;
+    margin-bottom: 2px;
+}
+
+.education-experience li{
+    list-style-type: none;
+  
+}
+

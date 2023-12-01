@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import InfoDisplay from "./infoDisplay"
 import PersonInfoDisplay from "./personalInfoDisplay"
+import "../../styles/outputComponents/infoDisplay.css";
+import "../../styles/outputComponents/infoDisplay-education.css";
 
 
 function CVDisplay({personalInfo,careerExperiences,educationCredentials,references}){
@@ -26,9 +28,11 @@ function CVDisplay({personalInfo,careerExperiences,educationCredentials,referenc
            {/* { renderFields(personalInfo)} */}
            <PersonInfoDisplay personalInfo={personalInfo}/>
            {/* { renderArray(careerExperiences)} */}
-           <InfoDisplay displayInfo={careerExperiences} title={"Work Experience"}/>
+           <InfoDisplay className="career-experience" displayInfo={careerExperiences} title={"Work Experience"}/>
            {/* { renderArray(educationCredentials)}
+
            { renderArray(references)} */}
+           <InfoDisplay className="education-experience" displayInfo={educationCredentials} title={"Education"}/>
         </div>
     )
 
