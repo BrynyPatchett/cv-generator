@@ -1,0 +1,6 @@
+.skill{
+    padding-bottom: 3px;
+    >p{
+        margin: 0;
+    }
+}

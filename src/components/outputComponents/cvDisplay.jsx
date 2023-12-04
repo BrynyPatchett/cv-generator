@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
-import InfoDisplay from "./infoDisplay"
-import PersonInfoDisplay from "./personalInfoDisplay"
+import InfoDisplay from "./infoDisplay";
+import PersonInfoDisplay from "./personalInfoDisplay";
+import ReferenceDisplay from "./referenceDisplay";
+import SkillDisplay from "./skillDisplay";
 import "../../styles/outputComponents/infoDisplay.css";
 import "../../styles/outputComponents/infoDisplay-education.css";
 
 
-function CVDisplay({personalInfo,careerExperiences,educationCredentials,references}){
+function CVDisplay({personalInfo,careerExperiences,educationCredentials,skills,references}){
 
 
     function renderFields(obj){
@@ -33,6 +35,10 @@ function CVDisplay({personalInfo,careerExperiences,educationCredentials,referenc
 
            { renderArray(references)} */}
            <InfoDisplay className="education-experience" displayInfo={educationCredentials} title={"Education"}/>
+
+            <SkillDisplay className="skill-display" skills={skills}/>
+
+           <ReferenceDisplay references={references} />
         </div>
     )
 

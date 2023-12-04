@@ -1,4 +1,4 @@
-import "../../styles/outputComponents/infoDisplay.css";
+
 
 function InfoDisplay({ displayInfo, title,className }) {
   if (displayInfo.length > 0) {
