@@ -11,7 +11,7 @@ function Section({ cred, credArray, setCredArray, sectionDescription }) {
           <input
             key={elem}
             type="text"
-            value={cred[elem] ? cred[elem] : ""}
+            defaultValue={cred[elem] !== "" ? cred[elem] : ""}
             placeholder={sectionDescription[elem]}
             onChange={(e) => {
               updateCredential(
@@ -28,7 +28,7 @@ function Section({ cred, credArray, setCredArray, sectionDescription }) {
         return (<textarea
             key={elem}
             type="text"
-            value={cred[elem] ? cred[elem] : ""}
+            defaultValue={cred[elem] !== "" ? cred[elem] : ""}
             placeholder={sectionDescription[elem]}
             onChange={(e) => {
               updateCredential(
