@@ -71,7 +71,7 @@ button:focus-visible {
 
 /*Non default styling starts here*/
 
-
+/* 
 #root{
   display: flex;
   height: 100%;
@@ -80,13 +80,13 @@ button:focus-visible {
   @media (max-width: 768px) {
     flex-direction: column
   }
-}
+} */
 
 
 .inputLeft{
  background-color: rgb(245, 244, 244); 
  flex: 1;
- 
+
 }
 
 .outputRight{
@@ -96,10 +96,8 @@ button:focus-visible {
   box-shadow: 2px 2px 12px rgb(177, 177, 177);
   background-color: rgb(255, 255, 255); 
   margin: 30px 50px;
-  @media (max-width: 768px) {
-    flex:1;
-  }
+
   @media (max-width:768px) {
-    margin:10px;
+    margin:30px;
   }
 }

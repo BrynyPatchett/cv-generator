@@ -157,35 +157,35 @@ function App() {
           personalInfo={personinfo}
           updatePersonalInfo={updatePersonalInfo}
         />
-        <Panel
+        {/* <Panel
           credArray={careerExperiences}
           setCredArray={setcareerExperiences}
           largestId={largestExperienceId}
           panelTitle={"Experience"}
           sectionDescription={panelDescriptions["career"]}
-        />
-        <Panel
+        /> */}
+        {/* <Panel
           credArray={educationCredentials}
           setCredArray={setEducationCredentials}
           largestId={largestEducationId}
           panelTitle={"Education"}
           sectionDescription={panelDescriptions["education"]}
-        />
-        <Panel
+        /> */}
+        {/* <Panel
           credArray={skills}
           setCredArray={setSkills}
           largestId={largestSkillId}
           panelTitle={"Skills"}
           sectionDescription={panelDescriptions["skills"]}
-        />
+        /> */}
 
-        <Panel
+        {/* <Panel
           credArray={references}
           setCredArray={setReferences}
           largestId={largestReferenceId}
           panelTitle={"References"}
           sectionDescription={panelDescriptions["references"]}
-        />
+        /> */}
       </div>
       <div className="outputRight">
         <CVDisplay
