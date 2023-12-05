@@ -1,31 +1,51 @@
 /* eslint-disable react/prop-types */
+import "../../styles/inputComponents/personalInfo.css"
+
 function PersonalInfo({personalInfo,updatePersonalInfo}) {
 
   return (
-    <>
+    <div className="panel">
+    <h1>Personal Information</h1>
       <div className="personalInfo">
-        <input
-          onChange={(e) => updatePersonalInfo(e, "firstName")}
-          placeholder="First Name"
-          defaultValue={personalInfo.firstName !== "" ? personalInfo.firstName : ""}
-        />
+    
+      <div className="personalInput">
+        <label htmlFor="firstname">First Name</label>
+          <input
+            onChange={(e) => updatePersonalInfo(e, "firstName")}
+            placeholder="First Name"
+            name="firstname"
+            defaultValue={personalInfo.firstName !== "" ? personalInfo.firstName : ""}
+          />
+      </div>
+      <div className="personalInput">
+        <label htmlFor="lastname">Last Name</label>
         <input
           onChange={(e) => updatePersonalInfo(e, "lastName")}
-          placeholder="Last Name"
+          placeholder="Lastname"
+          name="lastname"
           defaultValue={personalInfo.lastName !== "" ? personalInfo.lastName : ""}
         />
+        </div>
+        <div className="personalInput">
+        <label htmlFor="phonenumber">Phone Number</label>
         <input
           onChange={(e) => updatePersonalInfo(e, "phoneNumber")}
           placeholder="Phone Number"
+          name="phonenumber"
          defaultValue={personalInfo.phoneNumber !== "" ? personalInfo.phoneNumber : ""}
         />
+        </div>
+        <div className="personalInput">
+        <label htmlFor="email">Email</label>
         <input
           onChange={(e) => updatePersonalInfo(e, "email")}
           placeholder="Email address"
+          name="email"
           defaultValue={personalInfo.email !== "" ? personalInfo.email : ""}
         />
+        </div>
       </div>
-    </>
+    </div>
   );
 }
 

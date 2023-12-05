@@ -17,10 +17,10 @@ function App() {
 
   //personinfo object contain information about a person
   const [personinfo, setPersonalInfo] = useState({
-    firstName: "Bryny",
-    lastName: "Patchett",
-    phoneNumber: "021 237 7070",
-    email: "bryny@live.com",
+    firstName: "John",
+    lastName: "Smith",
+    phoneNumber: "021 12337 707120",
+    email: "jsmith@live.com",
   });
   //Description object of panel inputs, Key is variable that input edits, value is placeholder for input.
   const panelDescriptions = {
@@ -46,7 +46,7 @@ function App() {
     },
     skills: {
       title: "Title",
-      description: "ASDASD",
+      description: "Description",
     },
   };
 
@@ -64,7 +64,7 @@ function App() {
   const [careerExperiences, setcareerExperiences] = useState([
     {
       id: 123123,
-      location: "Shift72",
+      location: "ShakerX",
       title: "Junior Software Developer",
       description:
         "I worked on many projects and features across both the front-end and back-end. This role required the use and understanding of many different technologies such as Golang, HTML, CSS, databases and Docker. This experience expanded my technical knowledge of software development, as well as both front-end and back-end technologies",
@@ -73,10 +73,10 @@ function App() {
     },
     {
       id: 123124,
-      location: "Shift72",
-      title: "Junior Software Developer",
+      location: "Smither",
+      title: "Software Tester",
       description:
-        " was responsible for ensuring the quality and functionality of both back-end and front-end software.",
+        " I was responsible for ensuring the quality and functionality of both back-end and front-end software.",
       dateStart: "August 2019",
       dateEnd: "January 2022",
     },
@@ -85,21 +85,21 @@ function App() {
   const [references, setReferences] = useState([
     {
       id: 123,
-      name: "Louis Saunders",
+      name: "Louis Bobbins",
       //relation/position
       relationship: "Senior Test Analyst",
-      company: "Shift72",
-      phoneNumber: "020 4118 6560",
-      email: "louis.saunders@gmail.com",
+      company: "ShakerX",
+      phoneNumber: "+100 411 6110",
+      email: "louis.Bobbins@gmail.com",
     },
     {
       id: 124,
-      name: "Shannon Skinner",
+      name: "Seymour Skinner",
       //relation/position
       relationship: "VP Technology & Innovation",
-      company: "Shift72",
-      phoneNumber: "021 150 1409",
-      email: "shannonsnz@gmail.com",
+      company: "Smither",
+      phoneNumber: "+11230 41121 61110",
+      email: "suuuperman@gmail.com",
     },
   ]);
 
@@ -151,9 +151,8 @@ function App() {
     setPersonalInfo({ ...personinfo, [field]: e.target.value });
   }
   return (
-    <>
+    <div className="app">
       <div className="inputLeft">
-        <h1>Personal Information</h1>
         <PersonalInfo
           personalInfo={personinfo}
           updatePersonalInfo={updatePersonalInfo}
@@ -197,7 +196,7 @@ function App() {
           references={references}
         />
       </div>
-    </>
+    </div>
   );
 }
 

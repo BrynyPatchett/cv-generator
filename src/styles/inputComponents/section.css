@@ -1,0 +1,44 @@
+.section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px;
+
+    >button{
+        justify-self: flex-end;
+        grid-column:2/3;
+    }
+/*1496 might be right width*/
+    @media (max-width: 768px){
+        margin: 0;
+        grid-template-columns: 1fr;
+        >button{
+            justify-self: flex-end;
+            grid-column:auto/auto;
+        }
+
+    }
+}
+
+.sectioninput{
+display: flex;
+flex-direction: column;
+}
+
+.seperator{
+    height: 10px;
+    width: 100%;
+background-color: black;
+}
+
+/* .textinput{
+    width: min-content;
+} */
+
+textarea{
+    grid-column: 1/3;
+    resize: none;
+    @media (max-width: 768px){
+        grid-column:auto/auto;
+    }
+}
