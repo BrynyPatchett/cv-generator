@@ -8,7 +8,6 @@ function App() {
   //will need to load thing from local storage here once;
 
   function savePdf(){
-    console.log('SAVE')
     window.print();
   }
   //reduced an array to the largest id

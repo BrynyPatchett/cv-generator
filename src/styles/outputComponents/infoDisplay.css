@@ -3,7 +3,8 @@
       border-bottom: 2px solid rgb(163, 163, 163);
       padding-bottom: 20px;
       >h2{
-        page-break-before: page;
+        /* page-break-before: page; */
+        font-weight: 100;
      }
      color: black;
 }
@@ -14,6 +15,7 @@ h3{
 }
 .sectionTitle{
     margin-bottom: 10px;
+    font-weight: 400;
 }
 
 .info{

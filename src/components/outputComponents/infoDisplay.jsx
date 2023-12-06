@@ -1,4 +1,4 @@
-
+/* eslint-disable react/prop-types */
 
 function InfoDisplay({ displayInfo, title,className }) {
   if (displayInfo.length > 0) {

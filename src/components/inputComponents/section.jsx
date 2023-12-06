@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { removeCredential, updateCredential } from "../../untils/stateUtils";
 import "../../styles/inputComponents/section.css"
 

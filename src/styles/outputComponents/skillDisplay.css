@@ -4,4 +4,8 @@
         margin: 0;
        
     }
+    >h3{
+        color: var(--theme-primary);
+    }
 }
+

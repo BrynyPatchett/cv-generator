@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import '../../styles/outputComponents/referenceDisplay.css'
 
 
