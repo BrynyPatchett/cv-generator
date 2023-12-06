@@ -16,6 +16,10 @@
             max-width: 10ch;
             
           }
+          @media print {
+            width: 70ch;
+            max-width: 70ch;
+           }
 
     >p{
         margin: 0;

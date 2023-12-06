@@ -73,6 +73,9 @@ button:focus-visible {
 .inputLeft{
  background-color: rgb(245, 244, 244); 
  flex: 1;
+ @media print {
+  display: none !important;
+ }
 
 }
 
@@ -82,6 +85,10 @@ button:focus-visible {
   height: min-content;
   box-shadow: 2px 2px 12px rgb(177, 177, 177);
   background-color: rgb(255, 255, 255); 
+  @media print {
+    border-radius: 0;!important;
+    box-shadow: none;
+   }
  
 }
 

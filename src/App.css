@@ -1,12 +1,10 @@
 
-.education-section{
-  border: 2px solid navy;
-}
-
-
 .cvDisplay{
   background-color: rgb(255, 255, 255);
   margin: 10px;
+  @media print {
+    margin:0 !important;
+   }
   
 }
 
@@ -16,7 +14,12 @@
   flex-direction: row;
   margin:40px;
   gap: 30px;
+  /* break-before: page; */
   @media (max-width:768px) {
     flex-direction: column;
   }
+  @media print {
+    margin:0;
+   }
 }
+

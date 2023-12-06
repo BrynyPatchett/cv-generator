@@ -2,6 +2,9 @@
 .displayInfo{
       border-bottom: 2px solid rgb(163, 163, 163);
       padding-bottom: 20px;
+      >h2{
+        page-break-before: page;
+     }
 }
 
 h3{
@@ -36,12 +39,13 @@ h3{
     width: 30ch;
     max-width: 30ch;
     overflow-wrap: break-word;
-
-
-
     @media (max-width: 768px) {
         max-width: 55px;
       }
+      @media print {
+        width: 40ch;
+        max-width: 40ch;
+       }
     
 }
 .info-wrapper{
@@ -67,7 +71,13 @@ h3{
         width: 30ch;
         max-width: 20ch;
       }
-      /* border-left: 3px solid navy; */
+
+      @media print {
+        margin: 0;
+        width: 70ch;
+        max-width: 70ch;
+        overflow-wrap: break-word;
+       }
 }
 
 
