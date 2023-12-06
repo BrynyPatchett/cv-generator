@@ -7,6 +7,9 @@ import Panel from "./components/inputComponents/panel";
 function App() {
   //will need to load thing from local storage here once;
 
+  function savePdf(){
+    console.log('SAVE')
+  }
   //reduced an array to the largest id
   function latestId(array) {
     let x = array.reduce((prev, curr) => {
@@ -197,6 +200,7 @@ function App() {
           references={references}
         />
       </div>
+      <div className="save"><button className="saveButton" onClick={savePdf}>Save as PDF</button></div>
     </div>
   );
 }

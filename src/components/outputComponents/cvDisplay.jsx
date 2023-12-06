@@ -39,6 +39,7 @@ function CVDisplay({personalInfo,careerExperiences,educationCredentials,skills,r
             <SkillDisplay className="skill-display" skills={skills}/>
 
            <ReferenceDisplay references={references} />
+          
         </div>
     )
 
