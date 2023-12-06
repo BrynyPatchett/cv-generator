@@ -85,17 +85,3 @@ button:focus-visible {
  
 }
 
-.save{
-  display: flex ;
-  position: fixed;
-  justify-content: center;
-  align-items: center;
-  bottom: 20px;
-  width: 100%;
-  z-index: 1;
-  right: 0;
-  >button{
-    background-color: lightblue;
-    border-color: #213547;
-  }
-}

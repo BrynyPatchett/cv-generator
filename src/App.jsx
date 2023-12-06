@@ -200,7 +200,6 @@ function App() {
           references={references}
         />
       </div>
-      <div className="save"><button className="saveButton" onClick={savePdf}>Save as PDF</button></div>
     </div>
   );
 }
