@@ -1,6 +1,6 @@
 .personalInfo{
 display: grid;
-grid-template-columns: repeat(auto-fit,  minmax(200px, 1fr));
+grid-template-columns: repeat(auto-fit,  minmax(250px, 1fr));
 justify-content: center;
 gap: 20px;
 margin: 20px;
@@ -8,14 +8,7 @@ margin: 20px;
     grid-template-columns: 1fr
 }
 
-/*display: flex;
-flex-wrap: wrap;
- max-width: 500px; 
-gap: 20px;
-margin: 20px;
-@media (max-width: 768px) {
-     grid-template-columns: 1fr 
-} */
+
 }
 .personalInput{
     display: flex;

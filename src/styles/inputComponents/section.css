@@ -1,6 +1,6 @@
 .section{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit,  minmax(min-content, 1fr));
     gap: 20px;
     margin: 20px;
 
@@ -23,12 +23,13 @@
 .sectioninput{
 display: flex;
 flex-direction: column;
+font-size: .8rem;
 }
 
 .seperator{
-    height: 10px;
-    width: 100%;
-background-color: black;
+    height: 2px;
+    margin: 10px;
+background-color: rgb(175, 175, 175);
 }
 
 /* .textinput{

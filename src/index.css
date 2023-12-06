@@ -49,7 +49,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #1b1f61;
 }
 button:focus,
 button:focus-visible {
@@ -68,18 +68,6 @@ button:focus-visible {
   }
 }
 
-/*Non default styling starts here*/
-
-/* 
-#root{
-  display: flex;
-  height: 100%;
-  justify-content: center;
-
-  @media (max-width: 768px) {
-    flex-direction: column
-  }
-} */
 
 
 .inputLeft{
@@ -94,9 +82,5 @@ button:focus-visible {
   height: min-content;
   box-shadow: 2px 2px 12px rgb(177, 177, 177);
   background-color: rgb(255, 255, 255); 
-  margin: 30px 50px;
-
-  @media (max-width:768px) {
-    margin:30px;
-  }
+ 
 }

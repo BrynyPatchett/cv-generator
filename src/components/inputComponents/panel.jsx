@@ -15,7 +15,7 @@ return (
     {credArray.map((elem =>(
         <Section key={elem.id} cred={elem} credArray={credArray} setCredArray={setCredArray} sectionDescription={sectionDescription}/>
     )))}
-    <button type="" onClick={()=>addNewCredential(credArrayElemCount,setCredArrayElemCount,credArray, setCredArray)}>ADD {panelTitle}</button>
+    <div className="add-button"><button type="" onClick={()=>addNewCredential(credArrayElemCount,setCredArrayElemCount,credArray, setCredArray)}>ADD {panelTitle}</button></div>
     </div>
 )
 
