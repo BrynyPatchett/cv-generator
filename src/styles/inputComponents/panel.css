@@ -10,4 +10,7 @@
 .add-button{
     display: flex;
     justify-content: center;
+    >button{
+        background-color: lightgreen;
+    }
 }

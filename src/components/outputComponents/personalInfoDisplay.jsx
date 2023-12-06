@@ -16,10 +16,13 @@ function PersonInfoDisplay({ personalInfo }) {
       </h1>
       <div className="contact">
         <div className="contactField">
-            { personalInfo.phoneNumber && (<><p className="fieldTitle">Phone:</p> <p className="fieldValue">{personalInfo.phoneNumber}</p></>)}
+            { personalInfo.phoneNumber && (<><p className="fieldTitle">Phone</p> <p className="fieldValue">{personalInfo.phoneNumber}</p></>)}
         </div>
         <div className="contactField">
-        { personalInfo.email && (<><p className="fieldTitle">Email:</p> <p className="fieldValue">{personalInfo.email}</p></>)}
+        { personalInfo.email && (<><p className="fieldTitle">Email</p> <p className="fieldValue">{personalInfo.email}</p></>)}
+        </div>
+        <div className="contactField">
+        { personalInfo.github && (<><p className="fieldTitle">GitHub</p> <p className="fieldValue">{personalInfo.github}</p></>)}
         </div>
       </div>
     </div>

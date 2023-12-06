@@ -35,13 +35,11 @@
 
     
 }
-.fieldTitle{
-  width: 8ch;
-  max-width: 8ch;
-}
 
 
 
 .fieldTitle{
+    width: 8ch;
     max-width: 30ch;
+    color: var(--theme-primary);
   }

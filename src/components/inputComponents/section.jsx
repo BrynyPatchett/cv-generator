@@ -48,10 +48,11 @@ function Section({ cred, credArray, setCredArray, sectionDescription }) {
             />)
         }})}
         <button
+        className="delete-button"
           type=""
           onClick={() => removeCredential(cred, credArray, setCredArray)}
         >
-          DELETE
+          Delete
         </button>
       </div>
       <div  className="seperator"></div>

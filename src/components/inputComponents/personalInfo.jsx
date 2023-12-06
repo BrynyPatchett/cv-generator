@@ -44,6 +44,15 @@ function PersonalInfo({personalInfo,updatePersonalInfo}) {
           defaultValue={personalInfo.email !== "" ? personalInfo.email : ""}
         />
         </div>
+        <div className="personalInput">
+        <label htmlFor="github">GitHub</label>
+        <input
+          onChange={(e) => updatePersonalInfo(e, "github")}
+          placeholder="GitHub link"
+          name="github"
+          defaultValue={personalInfo.github !== "" ? personalInfo.github : ""}
+        />
+         </div>
       </div>
     </div>
   );

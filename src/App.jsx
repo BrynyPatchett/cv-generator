@@ -9,6 +9,7 @@ function App() {
 
   function savePdf(){
     console.log('SAVE')
+    window.print();
   }
   //reduced an array to the largest id
   function latestId(array) {
@@ -200,6 +201,7 @@ function App() {
           references={references}
         />
       </div>
+      <div className="save"><button className="saveButton" onClick={savePdf}>Save as PDF</button></div>
     </div>
   );
 }

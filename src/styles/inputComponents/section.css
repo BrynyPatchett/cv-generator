@@ -43,3 +43,7 @@ textarea{
         grid-column:auto/auto;
     }
 }
+
+.delete-button{
+    background-color: lightcoral;
+}

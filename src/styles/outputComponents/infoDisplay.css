@@ -5,6 +5,7 @@
       >h2{
         page-break-before: page;
      }
+     color: black;
 }
 
 h3{
@@ -32,6 +33,7 @@ h3{
 .title{
     display: inline;
     margin-left: 5px;
+    color: var(--theme-primary);
 }
 
 .date{
@@ -49,7 +51,7 @@ h3{
     
 }
 .info-wrapper{
-    border-left: 3px solid navy;
+    border-left: 3px solid var(--theme-border);
     padding: 5px;
     height: auto;
     margin-bottom: 2px;
@@ -86,5 +88,6 @@ li{
     list-style-type:'\2022';
     margin-left: -1px;
     margin-right: 10px;
+    color: var(--theme-primary);
 }
 

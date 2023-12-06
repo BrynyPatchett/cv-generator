@@ -10,6 +10,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --theme-primary: #3599e3;
+  --theme-secondary: rgb(51, 135, 163);
+  --theme-border: var(--theme-primary);
+
 }
 
 a {
@@ -90,5 +94,24 @@ button:focus-visible {
     box-shadow: none;
    }
  
+}
+
+.save{
+  display: flex ;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  bottom: 20px;
+  width: 100%;
+  z-index: 1;
+  right: 0;
+  >button{
+    background-color: lightgreen;
+    border-color: #213547;
+  }
+
+  @media print{
+    display: none;
+  }
 }
 
