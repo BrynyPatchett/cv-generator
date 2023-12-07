@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from "react";
-import storageAvailable from "./utils/localStorage"
 import "./App.css";
 import PersonalInfo from "./components/inputComponents/personalInfo";
 import CVDisplay from "./components/outputComponents/cvDisplay";
