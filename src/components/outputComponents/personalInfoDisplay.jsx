@@ -13,7 +13,7 @@ function PersonInfoDisplay({ personalInfo }) {
   return (
     <div className="personalDisplay">
       <h1 className="fullName">
-        {hasName() ? personalInfo.firstName + " " + personalInfo.lastName: "FullName"}
+        {hasName() ? (personalInfo.firstName || "") + " " + (personalInfo.lastName || "") : "FullName"}
       </h1>
       <div className="contact">
         <div className="contactField">

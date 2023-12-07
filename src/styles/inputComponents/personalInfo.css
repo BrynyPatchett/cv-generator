@@ -14,7 +14,17 @@ margin: 20px;
     display: flex;
     flex-direction: column;
 }
+.personalButtons{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
 
+    >button{
+        border-radius: 8px;
+        padding: 8px;
+        font-size: 1rem;
+    }
+}
 
 input{
     border-radius: 8px;
@@ -28,4 +38,8 @@ input{
 
 .fullName{
     font-weight: 100;
+}
+
+.load-button{
+    border-color: black;
 }

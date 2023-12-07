@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import "../../styles/inputComponents/personalInfo.css"
 
-function PersonalInfo({personalInfo,updatePersonalInfo}) {
+function PersonalInfo({personalInfo,updatePersonalInfo,clearFunction,loadExample}) {
 
   return (
     <div className="panel">
@@ -14,7 +14,7 @@ function PersonalInfo({personalInfo,updatePersonalInfo}) {
             onChange={(e) => updatePersonalInfo(e, "firstName")}
             placeholder="First Name"
             name="firstname"
-            defaultValue={personalInfo.firstName !== "" ? personalInfo.firstName : ""}
+            value={(personalInfo.firstName !== "" ? personalInfo.firstName : "") || ''}
           />
       </div>
       <div className="personalInput">
@@ -23,7 +23,7 @@ function PersonalInfo({personalInfo,updatePersonalInfo}) {
           onChange={(e) => updatePersonalInfo(e, "lastName")}
           placeholder="Lastname"
           name="lastname"
-          defaultValue={personalInfo.lastName !== "" ? personalInfo.lastName : ""}
+          value={(personalInfo.lastName !== "" ? personalInfo.lastName : "")|| ''}
         />
         </div>
         <div className="personalInput">
@@ -32,7 +32,7 @@ function PersonalInfo({personalInfo,updatePersonalInfo}) {
           onChange={(e) => updatePersonalInfo(e, "phoneNumber")}
           placeholder="Phone Number"
           name="phonenumber"
-         defaultValue={personalInfo.phoneNumber !== "" ? personalInfo.phoneNumber : ""}
+         value={(personalInfo.phoneNumber !== "" ? personalInfo.phoneNumber : "") || ''}
         />
         </div>
         <div className="personalInput">
@@ -41,7 +41,7 @@ function PersonalInfo({personalInfo,updatePersonalInfo}) {
           onChange={(e) => updatePersonalInfo(e, "email")}
           placeholder="Email address"
           name="email"
-          defaultValue={personalInfo.email !== "" ? personalInfo.email : ""}
+          value={(personalInfo.email !== "" ? personalInfo.email : "")|| ''}
         />
         </div>
         <div className="personalInput">
@@ -50,8 +50,12 @@ function PersonalInfo({personalInfo,updatePersonalInfo}) {
           onChange={(e) => updatePersonalInfo(e, "github")}
           placeholder="GitHub link"
           name="github"
-          defaultValue={personalInfo.github !== "" ? personalInfo.github : ""}
+          value={(personalInfo.github !== "" ? personalInfo.github : "") || ""}
         />
+         </div>
+         <div className="personalButtons">
+         <button className="load-button" onClick={loadExample}>Load Example</button>
+          <button className="delete-button" onClick={clearFunction}>Clear CV</button>
          </div>
       </div>
     </div>

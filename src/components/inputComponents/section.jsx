@@ -16,7 +16,7 @@ function Section({ cred, credArray, setCredArray, sectionDescription }) {
               <input
                 type="text"
                 name={elem}
-                defaultValue={cred[elem] !== "" ? cred[elem] : ""}
+                value={(cred[elem] !== "" ? cred[elem] : "") || ''}
                 placeholder={sectionDescription[elem]}
                 onChange={(e) => {
                   updateCredential(
@@ -35,7 +35,7 @@ function Section({ cred, credArray, setCredArray, sectionDescription }) {
               key={elem}
               rows={6}
               type="text"
-              defaultValue={cred[elem] !== "" ? cred[elem] : ""}
+              defaultValue={(cred[elem] !== "" ? cred[elem] : "") || ''}
               placeholder={sectionDescription[elem]}
               onChange={(e) => {
                 updateCredential(
