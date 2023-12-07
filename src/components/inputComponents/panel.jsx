@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import { addNewCredential } from "../../untils/stateUtils";
+import { addNewCredential } from "../../utils/stateUtils";
 import Section from "./section";
 import "../../styles/inputComponents/panel.css";
 

@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { removeCredential, updateCredential } from "../../untils/stateUtils";
+import { removeCredential, updateCredential } from "../../utils/stateUtils";
 import "../../styles/inputComponents/section.css"
 
 function Section({ cred, credArray, setCredArray, sectionDescription }) {
