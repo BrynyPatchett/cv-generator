@@ -92,7 +92,6 @@ button:focus-visible {
   right: 0;
   >button{
     background-color: lightgreen;
-    border-color: #213547;
   }
 
   @media print{
