@@ -18,8 +18,6 @@ function App() {
   }
 
   //personinfo object contain information about a person
-
-
  
   //Description object of panel inputs, Key is variable that input edits, value is placeholder for input.
   const panelDescriptions = {

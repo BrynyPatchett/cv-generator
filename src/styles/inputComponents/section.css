@@ -39,6 +39,11 @@ background-color: rgb(175, 175, 175);
 textarea{
     grid-column: 1/3;
     resize: none;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(236, 236, 236, 0.685);
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 0.9rem;
     @media (max-width: 768px){
         grid-column:auto/auto;
     }
