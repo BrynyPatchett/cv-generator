@@ -46,12 +46,11 @@ function App() {
       description: "Description",
     },
   };
-  const [personinfo, setPersonalInfo] = useState({});
-
-  const [educationCredentials, setEducationCredentials] = useState([]);
-  const [careerExperiences, setcareerExperiences] = useState([]);
-  const [references, setReferences] = useState([]);
-  const [skills, setSkills] = useState([]);
+  const [personinfo, setPersonalInfo] = useState(JSON.parse(localStorage.getItem('personinfo')));
+  const [educationCredentials, setEducationCredentials] = useState(JSON.parse(localStorage.getItem('educationCredentials')));
+  const [careerExperiences, setcareerExperiences] = useState(JSON.parse(localStorage.getItem('careerExperiences')));
+  const [references, setReferences] = useState(JSON.parse(localStorage.getItem('references')));
+  const [skills, setSkills] = useState(JSON.parse(localStorage.getItem('skills')));
 
   function ClearCV(){
       setPersonalInfo([]);
@@ -144,34 +143,6 @@ function App() {
        },
      ]);
 }
-
-  useEffect(()=>{
-   
-  
-    const personinfo = JSON.parse(localStorage.getItem('personinfo'));
-    const educationCredentials = JSON.parse(localStorage.getItem('educationCredentials'));
-    const careerExperiences = JSON.parse(localStorage.getItem('careerExperiences'));
-    const references = JSON.parse(localStorage.getItem('references'));
-    const skills = JSON.parse(localStorage.getItem('skills'));
-
-    if(personinfo){
-      setPersonalInfo(personinfo);
-    }
-    if(educationCredentials){
-      setEducationCredentials(educationCredentials);
-    }
-    if(careerExperiences){
-      setcareerExperiences(careerExperiences);
-    }
-    if(references){
-      setReferences(references);
-    }
-    if(skills){
-      setSkills(skills);
-    }
-
-  },[]);
-
 
 
   //save personInfo in local
