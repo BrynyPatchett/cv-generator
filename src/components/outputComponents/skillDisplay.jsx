@@ -3,7 +3,7 @@ import "../..//styles/outputComponents/skillDisplay.css"
 
 
 function SkillDisplay({ skills }) {
-  if (skills.length > 0) {
+  if (skills && skills.length > 0) {
     return (
       <div className="displayInfo">
         <h2>Skills</h2>

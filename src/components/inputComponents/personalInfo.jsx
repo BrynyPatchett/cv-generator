@@ -14,7 +14,7 @@ function PersonalInfo({personalInfo,updatePersonalInfo,clearFunction,loadExample
             onChange={(e) => updatePersonalInfo(e, "firstName")}
             placeholder="First Name"
             name="firstname"
-            value={(personalInfo.firstName !== "" ? personalInfo.firstName : "") || ''}
+            value={(personalInfo && personalInfo.firstName !== "" ? personalInfo.firstName : "") || ''}
           />
       </div>
       <div className="personalInput">
@@ -23,7 +23,7 @@ function PersonalInfo({personalInfo,updatePersonalInfo,clearFunction,loadExample
           onChange={(e) => updatePersonalInfo(e, "lastName")}
           placeholder="Lastname"
           name="lastname"
-          value={(personalInfo.lastName !== "" ? personalInfo.lastName : "")|| ''}
+          value={(personalInfo && personalInfo.lastName !== "" ? personalInfo.lastName : "")|| ''}
         />
         </div>
         <div className="personalInput">
@@ -32,7 +32,7 @@ function PersonalInfo({personalInfo,updatePersonalInfo,clearFunction,loadExample
           onChange={(e) => updatePersonalInfo(e, "phoneNumber")}
           placeholder="Phone Number"
           name="phonenumber"
-         value={(personalInfo.phoneNumber !== "" ? personalInfo.phoneNumber : "") || ''}
+         value={(personalInfo && personalInfo.phoneNumber !== "" ? personalInfo.phoneNumber : "") || ''}
         />
         </div>
         <div className="personalInput">
@@ -41,7 +41,7 @@ function PersonalInfo({personalInfo,updatePersonalInfo,clearFunction,loadExample
           onChange={(e) => updatePersonalInfo(e, "email")}
           placeholder="Email address"
           name="email"
-          value={(personalInfo.email !== "" ? personalInfo.email : "")|| ''}
+          value={(personalInfo && personalInfo.email !== "" ? personalInfo.email : "")|| ''}
         />
         </div>
         <div className="personalInput">
@@ -50,7 +50,7 @@ function PersonalInfo({personalInfo,updatePersonalInfo,clearFunction,loadExample
           onChange={(e) => updatePersonalInfo(e, "github")}
           placeholder="GitHub link"
           name="github"
-          value={(personalInfo.github !== "" ? personalInfo.github : "") || ""}
+          value={(personalInfo && personalInfo.github !== "" ? personalInfo.github : "") || ""}
         />
          </div>
          <div className="personalButtons">

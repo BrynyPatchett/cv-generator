@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 function InfoDisplay({ displayInfo, title,className }) {
-  if (displayInfo.length > 0) {
+  if (displayInfo && displayInfo.length > 0) {
     return (
       <div className={"displayInfo " + className}>
         <h2 className="sectionTitle">{title}</h2>

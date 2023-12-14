@@ -11,6 +11,7 @@ function App() {
   }
   //reduced an array to the largest id
   function latestId(array) {
+  
     let x = array.reduce((prev, curr) => {
       return prev > curr.id ? prev : curr.id;
     }, -1);
@@ -174,18 +175,34 @@ function App() {
 
   //gets the largest ID from loaded obj arrays to use for the iniital ID offset (usefull for loading fom local storage)
   const largestEducationId = useMemo(() => {
+    if(educationCredentials === null){
+      console.log("NULLER")
+      return -1;
+    }
     return latestId(educationCredentials);
   }, []);
 
   const largestExperienceId = useMemo(() => {
-    return latestId(careerExperiences);
+    if(careerExperiences === null){
+      console.log("NULLER")
+      return -1;
+    }
+    return latestId(careerExperiences)
   }, []);
 
   const largestReferenceId = useMemo(() => {
+    if(references === null){
+      console.log("NULLER")
+      return -1;
+    }
     return latestId(references);
   }, []);
 
   const largestSkillId = useMemo(() => {
+    if(skills === null){
+      console.log("NULLER")
+      return -1;
+    }
     return latestId(skills);
   });
 

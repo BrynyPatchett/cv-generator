@@ -13,7 +13,7 @@ const [credArrayElemCount,setCredArrayElemCount] = useState(largestId + 1);
 return (
     <div className="panel">
     <h1>{panelTitle}</h1>
-    {credArray.map((elem =>(
+    {credArray && credArray.map((elem =>(
         <Section key={elem.id} cred={elem} credArray={credArray} setCredArray={setCredArray} sectionDescription={sectionDescription}/>
     )))}
     <div className="add-button"><button type="" onClick={()=>addNewCredential(credArrayElemCount,setCredArrayElemCount,credArray, setCredArray)}>Add {panelTitle}</button></div>

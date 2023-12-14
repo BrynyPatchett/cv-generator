@@ -3,7 +3,7 @@ import '../../styles/outputComponents/referenceDisplay.css'
 
 
 function ReferenceDisplay({ references }) {
-  if (references.length > 0) {
+  if (references  && references.length > 0) {
     return (
       <div className={"referenceDisplay"}>
         <h2 className="sectionTitle">References</h2>
